@@ -20,4 +20,9 @@ class FactorialTest {
     void calculate_2() {
         assertEquals(2, factorial.calculate(2));
     }
+
+    @Test
+    void calculate_15() {
+        assertEquals(39916800, factorial.calculate(11));
+    }
 }
