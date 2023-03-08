@@ -1,14 +1,16 @@
+import java.math.BigInteger;
+
 public class Factorial {
 
-    public int calculate(int n) {
+    public BigInteger calculate(int n) {
         if (n == 0) {
-            return 1;
+            return new BigInteger("1");
         } else {
-            int sum = 1;
+            BigInteger result = new BigInteger("1");
             for (int i = 0; i < n; i++) {
-                sum *= n - i;
+                result = result.multiply(BigInteger.valueOf(n - i));
             }
-            return sum;
+            return result;
         }
     }
 }
