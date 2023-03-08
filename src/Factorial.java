@@ -13,4 +13,18 @@ public class Factorial {
             return result;
         }
     }
+
+    public long calculateTwoNumbers(int a, int b) {
+        if (a < b) {
+            return 0L;
+        } else if (a == b) {
+            return 1L;
+        } else {
+            long result = a;
+            for (int i = b + 1; i < a; i++) {
+                result *= i;
+            }
+            return result;
+        }
+    }
 }

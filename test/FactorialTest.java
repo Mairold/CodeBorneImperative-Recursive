@@ -49,4 +49,29 @@ class FactorialTest {
         BigInteger bigInt = new BigInteger("40526919504877216755680601905432322134980384796226602145184481280000000000000");
         assertEquals(bigInt, factorial.calculate(57));
     }
+
+    @Test
+    void calculateTwoNumberFactorial_1_3() {
+        assertEquals(0L, factorial.calculateTwoNumbers(1, 3));
+    }
+
+    @Test
+    void calculateTwoNumberFactorial_1_569() {
+        assertEquals(0L, factorial.calculateTwoNumbers(1, 569));
+    }
+
+    @Test
+    void calculateTwoNumberFactorial_71_71() {
+        assertEquals(1L, factorial.calculateTwoNumbers(71, 71));
+    }
+
+    @Test
+    void calculateTwoNumberFactorial_0_0() {
+        assertEquals(1L, factorial.calculateTwoNumbers(0, 0));
+    }
+
+    @Test
+    void calculateTwoNumberFactorial_5_0() {
+        assertEquals(120L, factorial.calculateTwoNumbers(5, 0));
+    }
 }
