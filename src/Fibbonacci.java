@@ -11,10 +11,15 @@ public class Fibbonacci {
             ArrayList<Integer> fibSec = new ArrayList<>();
             fibSec.add(0);
             fibSec.add(1);
-            while (n >= fibSec.size()) {
-                fibSec.add(fibSec.get(fibSec.size() - 1) + fibSec.get(fibSec.size() - 2));
-            }
+            addNumbersToFibSec(n,fibSec);
             return fibSec.get(n - 1);
+        }
+    }
+
+    private void addNumbersToFibSec (int n, ArrayList<Integer> fibSec) {
+        if (n >= fibSec.size()) {
+            fibSec.add(fibSec.get(fibSec.size() - 1) + fibSec.get(fibSec.size() - 2));
+            addNumbersToFibSec(n,fibSec);
         }
     }
 }
