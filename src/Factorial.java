@@ -15,16 +15,10 @@ public class Factorial {
     }
 
     public long calculateTwoNumbers(int a, int b) {
-        if (a < b) {
-            return 0L;
-        } else if (a == b) {
-            return 1L;
-        } else {
-            long result = a;
-            for (int i = b + 1; i < a; i++) {
-                result *= i;
-            }
-            return result;
-        }
+        return a < b ? 0L : a == b ? 1L : multiplyTwoNumberDifferences(a, b);
+    }
+
+    private long multiplyTwoNumberDifferences(int a, int b) {
+        return a == 0 ? 1 : a == b ? b : a * multiplyTwoNumberDifferences(a - 1, b);
     }
 }
