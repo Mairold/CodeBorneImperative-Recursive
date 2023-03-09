@@ -25,4 +25,13 @@ public class FibbonacciTest {
     void calculate_20() {
         assertEquals(4181, fibbonacci.fibbonacciNumberAtPosition(20));
     }
+
+    @Test
+    void calculate_neg5() {
+        try {
+            fibbonacci.fibbonacciNumberAtPosition(-5);
+        } catch (IllegalArgumentException e) {
+            assertEquals("Negative numbers not allowed!", e.getMessage());
+        }
+    }
 }
